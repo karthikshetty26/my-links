@@ -1,0 +1,73 @@
+/* NAVBAR COMPONENT STYLES */
+/* Contains theme toggle, menu button, and navigation panel styling */
+
+/* Theme Toggle Styles */
+/* Controls the appearance of the theme toggle button and indicator */
+.nav {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 998;
+}
+
+.theme_div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: var(--font-family-secondary);
+    color: var(--foreground-05);
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.theme_div.only_theme {
+    right: 30px;
+}
+
+/* Theme toggle button */
+.dark_light_btn {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+
+/* Theme toggle button hover effect */
+.theme_div:hover .dark_light_btn {
+    rotate: -90deg;
+}
+
+.dark_light_btn span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.dark_light_btn span svg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--foreground);
+}
+
+/* Responsive adjustments */
+/* Optimize layout for smaller screens */
+@media only screen and (max-width: 800px) {
+
+    /* Adjust theme toggle position */
+    .theme_div {
+        font-size: 12px;
+    }
+
+    .dark_light_btn {
+        width: 15px;
+        height: 15px;
+    }
+}
