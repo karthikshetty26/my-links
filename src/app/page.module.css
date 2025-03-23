@@ -1,12 +1,16 @@
+/* Main container for the entire page */
 .main {
   position: relative;
+  z-index: 1;
   width: 100%;
   height: fit-content;
   padding-bottom: 80px;
+  /* Space for copyright at bottom */
   min-height: 100vh;
   margin: auto;
 }
 
+/* Bio section styling - contains profile image and personal info */
 .section_bio {
   width: 100%;
   max-width: 900px;
@@ -18,6 +22,7 @@
   cursor: default;
 }
 
+/* Container for the circular profile image */
 .section_bio .image_container {
   width: 200px;
   height: 200px;
@@ -25,6 +30,7 @@
   overflow: hidden;
 }
 
+/* Styling for the text content next to the profile image */
 .section_bio .bio_content {
   width: calc(100% - 230px);
   padding-left: 20px;
@@ -34,12 +40,14 @@
   align-items: flex-start;
 }
 
+/* Name heading styling */
 .section_bio h1 {
   font-size: 1.3rem;
   color: var(--foreground);
   transition: all 350ms ease-in-out;
 }
 
+/* Bio text styling */
 .section_bio .bio {
   margin-top: 15px;
   font-size: 0.9rem;
@@ -50,12 +58,14 @@
   transition: all 350ms ease-in-out;
 }
 
+/* Location info container */
 .section_bio .location {
   margin-top: 15px;
   display: flex;
   align-items: center;
 }
 
+/* Container for location icon */
 .section_bio .location span {
   width: 15px;
   height: 15px;
@@ -65,6 +75,7 @@
   justify-content: center;
 }
 
+/* Styling for the location SVG icon */
 .section_bio .location span svg {
   width: 100%;
   height: 100%;
@@ -75,6 +86,7 @@
   transition: all 350ms ease-in-out;
 }
 
+/* Location text styling */
 .section_bio .location p {
   font-size: 0.8rem;
   font-weight: 500;
@@ -83,72 +95,90 @@
   transition: all 350ms ease-in-out;
 }
 
+/* Responsive styles for tablets and small desktops */
 @media only screen and (max-width: 800px) {
   .section_bio {
     padding: 50px 15px 20px 15px;
     flex-direction: column;
   }
 
+  /* Reduce image size on smaller screens */
   .section_bio .image_container {
     width: 150px;
     height: 150px;
   }
 
+  /* Adjust bio content for vertical layout */
   .section_bio .bio_content {
     width: 100%;
     padding-left: 0;
     align-items: center
   }
 
+  /* Adjust heading spacing in vertical layout */
   .section_bio h1 {
     margin-top: 20px;
     text-align: center;
   }
 
+  /* Center bio text on smaller screens */
   .section_bio .bio {
     text-align: center;
   }
 }
 
+/* Responsive styles for mobile devices */
 @media only screen and (max-width: 600px) {
+
+  /* Further reduce image size on mobile */
   .section_bio .image_container {
     width: 130px;
     height: 130px;
   }
 }
 
+/* Responsive styles for very small screens */
 @media only screen and (max-width: 320px) {
+
+  /* Adjust layout for smallest screens */
   .section_bio {
     align-items: flex-start;
   }
 
+  /* Smallest image size for tiny screens */
   .section_bio .image_container {
     width: 110px;
     height: 110px;
   }
 
+  /* Left-align content on very small screens */
   .section_bio .bio_content {
     align-items: flex-start
   }
 
+  /* Left-align heading on smallest screens */
   .section_bio h1 {
     text-align: left;
   }
 
+  /* Left-align bio text on smallest screens */
   .section_bio .bio {
     text-align: left;
   }
 
+  /* Adjust location info on smallest screens */
   .section_bio .location {
     align-items: flex-start;
   }
 }
 
+/* Styling for the highlighted sections (like social links) */
 .section_highlight {
   width: 100%;
   height: fit-content;
 }
 
+/* Social links grid container */
 .links {
   width: 100%;
   max-width: 1000px;
@@ -159,6 +189,7 @@
   gap: 1.5rem;
 }
 
+/* Individual social link styling */
 .link {
   padding: 10px 20px;
   display: flex;
@@ -172,6 +203,7 @@
   transition: all 350ms ease-in-out;
 }
 
+/* Container for the icon in each link */
 .link span {
   width: 0;
   height: 20px;
@@ -182,10 +214,12 @@
   transition: all 350ms ease-in-out;
 }
 
+/* Show icon on hover by expanding its width */
 .link:hover span {
   width: 20px;
 }
 
+/* Styling for the SVG icons in links */
 .link span svg {
   width: 100%;
   height: 100%;
@@ -196,22 +230,26 @@
   transition: all 350ms ease-in-out;
 }
 
+/* Adjust grid to two columns on medium screens */
 @media only screen and (max-width: 800px) {
   .links {
     grid-template-columns: 1fr 1fr;
   }
 }
 
+/* Single column layout for mobile devices */
 @media only screen and (max-width: 600px) {
   .links {
     grid-template-columns: 1fr;
   }
 
+  /* Slightly smaller font on mobile */
   .link {
     font-size: 0.9rem;
   }
 }
 
+/* Copyright text at the bottom of the page */
 .app_cc {
   width: 100%;
   display: block;
@@ -222,4 +260,147 @@
   text-align: center;
   opacity: 0.2;
   color: var(--foreground);
+}
+
+/* Background animation container */
+.animation {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Moves background behind other elements */
+  z-index: -1;
+}
+
+/* Container for floating circles */
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  /* Prevents circles from going outside */
+  overflow: hidden;
+}
+
+/* Individual floating circles */
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: var(--foreground-05);
+  animation: animate 25s linear infinite;
+  /* Starts below the screen */
+  bottom: -150px;
+}
+
+/* Circle 1 - Large */
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+/* Circle 2 - Small, fast floating */
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+/* Circle 3 - Small */
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+/* Circle 4 - Medium size, slow floating */
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+/* Circle 5 - Small */
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+/* Circle 6 - Large */
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+/* Circle 7 - Extra Large */
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+/* Circle 8 - Small, long duration */
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+/* Circle 9 - Extra Small */
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+/* Circle 10 - Extra Large */
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+/* Floating animation */
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+/* Responsive design: Adjust width for small screens */
+@media only screen and (max-width: 800px) {
+  .animation {
+    width: 800px;
+  }
 }
