@@ -1,6 +1,8 @@
 # Static Link Sharing Website
 
-This is a **static** link-sharing website built using **Next.js**. It allows to display of multiple links in a simple and customizable way. No backend or server is involved-everything runs on the client side.
+This is a link-sharing website built using **Next.js**. It allows to display of multiple links in a simple and customizable way. No backend or server is involved-everything runs on the client side.
+
+live: [connect.karthikshetty.info](connect.karthikshetty.info) 
 
 ## Features
 
