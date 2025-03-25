@@ -12,6 +12,8 @@
   --foreground-05: #3636368f;
   /* Light overlay color for modals/panels */
   --overlay: #f9f9f9;
+  /* CAT color */
+  --cat-color: #a4e84c;
 }
 
 /* Override variables for dark theme when data-theme="dark" is applied */
