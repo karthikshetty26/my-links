@@ -19,13 +19,13 @@ export const metadata = {
   metadataBase: new URL('https://connect.karthikshetty.info'),
 
   // Basic SEO metadata
-  title: "Karthik Shetty | Connect with Me",
+  title: "Connect with Karthik Shetty",
   description: "Find all my important links in one place! Connect with me through my portfolio, GitHub, LinkedIn, YouTube channels, and social media profiles.",
   keywords: "Karthik Shetty, social links, connect with me, link-sharing, portfolio links, GitHub, LinkedIn, YouTube, web development, full stack developer, React, Next.js, Angular, Java, MySQL",
 
   // Open Graph metadata for rich sharing experiences on Facebook, LinkedIn, etc.
   openGraph: {
-    title: "Karthik Shetty | Connect with Me",
+    title: "Connect with Karthik Shetty",
     description: "All my essential links in one place. Connect with me on various platforms and explore my work.",
     type: "website",
     locale: "en_US",
@@ -44,7 +44,7 @@ export const metadata = {
   // Twitter card metadata for optimized Twitter sharing
   twitter: {
     card: "summary_large_image",
-    title: "Karthik Shetty | Connect with Me",
+    title: "Connect with Karthik Shetty",
     description: "Find all my important links in one place, including portfolio, GitHub, LinkedIn, and social media.",
     creator: "@karthikshettyyy",
     images: ["/images/sharing/connect-og-image.jpg"]
