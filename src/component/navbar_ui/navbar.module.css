@@ -1,72 +1,110 @@
 /* NAVBAR COMPONENT STYLES */
-/* Contains theme toggle, menu button, and navigation panel styling */
-
-/* Theme Toggle Styles */
-/* Controls the appearance of the theme toggle button and indicator */
 .nav {
     position: fixed;
     right: 20px;
     top: 20px;
-    z-index: 998;
+    z-index: 999;
+    display: flex;
+    align-items: center;
 }
 
-.theme_div {
+/* Theme Toggle Container */
+.theme_selection, .copy_site {
     display: flex;
     align-items: center;
     cursor: pointer;
     font-family: var(--font-family-secondary);
     color: var(--foreground-05);
     letter-spacing: 2px;
-    font-size: 14px;
-}
-
-.theme_div.only_theme {
-    right: 30px;
-}
-
-/* Theme toggle button */
-.dark_light_btn {
-    width: 20px;
-    height: 20px;
+    font-size: 12px;
+    line-height: 0;
+    background: transparent;
     border: none;
-    background-color: transparent;
-    transition: all 0.7s ease;
-    cursor: pointer;
 }
 
-/* Theme toggle button hover effect */
-.theme_div:hover .dark_light_btn {
+.theme_selection.hide {
+    z-index: 90;
+}
+
+.copy_site {
+    z-index: 101;
+    margin-left: 15px;
+}
+
+/* Icon Container */
+.dark_light_icon, .copy_icon {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: rotate 0.7s ease;
+}
+
+/* Hover Effect */
+.theme_selection:hover .dark_light_icon {
     rotate: -90deg;
 }
 
-.dark_light_btn span {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
+.copy_site:hover .copy_icon {
+    rotate: -180deg;
 }
 
-.dark_light_btn span svg {
+/* Icon */
+.dark_light_icon svg, .copy_icon svg {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    opacity: 0.3;
+    color: var(--cat-color);
+    transition: all 350ms ease-in-out;
+}
+.theme_selection:hover .dark_light_icon svg, .copy_site:hover .copy_icon svg {
+    opacity: 0.8;
+}
+
+/* Toast message */
+/* Toast message */
+.toast_div {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 0;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.toast_div.show {
+    bottom: 30px;
+    height: fit-content;
+    opacity: 1;
+}
+
+.toast_messages {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 15px;
+    margin: auto;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 1rem;
+    background-color: var(--background);
     color: var(--foreground);
+    box-shadow: 0 3px 5px var(--foreground-05);
 }
 
-/* Responsive adjustments */
-/* Optimize layout for smaller screens */
+/* Responsive Adjustments */
 @media only screen and (max-width: 800px) {
-
-    /* Adjust theme toggle position */
-    .theme_div {
+    .theme_selection, .copy_site {
         font-size: 12px;
     }
 
-    .dark_light_btn {
+    .dark_light_icon {
         width: 15px;
         height: 15px;
     }
