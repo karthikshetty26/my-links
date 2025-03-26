@@ -106,7 +106,7 @@ export default function Home() {
         {/* List of animated floating circles */}
         <ul className={HOMECSS.circles}>
           {/* Generating 12 circle elements dynamically */}
-          {Array.from({ length: 12 }).map((_, i) => (
+          {Array.from({ length: 15 }).map((_, i) => (
             <li key={i} />
           ))}
         </ul>
