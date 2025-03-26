@@ -17,7 +17,7 @@ live: [connect.karthikshetty.info](connect.karthikshetty.info)
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/karthikshetty26/my-links.git
+git clone https://github.com/karthikshetty26/connect.git
 ```
 
 2. **Install dependencies**
