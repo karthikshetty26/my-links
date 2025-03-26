@@ -41,17 +41,18 @@
 }
 
 /* Name heading styling */
-.section_bio h1 {
-  font-size: 1.3rem;
+.bio_content h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 600;
   color: var(--foreground);
   transition: all 350ms ease-in-out;
 }
 
 /* Bio text styling */
-.section_bio .bio {
+.bio_content .bio {
   margin-top: 15px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1rem;
   letter-spacing: 1px;
   line-height: 1.5rem;
   color: var(--foreground);
@@ -59,14 +60,14 @@
 }
 
 /* Location info container */
-.section_bio .location {
+.bio_content .location {
   margin-top: 15px;
   display: flex;
   align-items: center;
 }
 
 /* Container for location icon */
-.section_bio .location span {
+.bio_content .location span {
   width: 15px;
   height: 15px;
   margin-right: 5px;
@@ -76,7 +77,7 @@
 }
 
 /* Styling for the location SVG icon */
-.section_bio .location span svg {
+.bio_content .location span svg {
   width: 100%;
   height: 100%;
   display: flex;
@@ -87,7 +88,7 @@
 }
 
 /* Location text styling */
-.section_bio .location p {
+.bio_content .location p {
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -116,13 +117,16 @@
   }
 
   /* Adjust heading spacing in vertical layout */
-  .section_bio h1 {
+  .bio_content h1 {
+    font-size: 1.5rem;
+    line-height: 1rem;
     margin-top: 20px;
     text-align: center;
   }
 
   /* Center bio text on smaller screens */
-  .section_bio .bio {
+  .bio_content .bio {
+    font-size: 0.9rem;
     text-align: center;
   }
 }
@@ -157,17 +161,17 @@
   }
 
   /* Left-align heading on smallest screens */
-  .section_bio h1 {
+  .bio_content h1 {
     text-align: left;
   }
 
   /* Left-align bio text on smallest screens */
-  .section_bio .bio {
+  .bio_content .bio {
     text-align: left;
   }
 
   /* Adjust location info on smallest screens */
-  .section_bio .location {
+  .bio_content .location {
     align-items: flex-start;
   }
 }
@@ -267,7 +271,7 @@
 
 /* Show icon on hover by expanding its width */
 .link:hover span:last-child div.icon {
-  width: 20px;
+  width: 30px;
 }
 
 /* Styling for the SVG icons in links */
@@ -309,12 +313,17 @@
   left: 0;
   font-size: 0.8rem;
   text-align: center;
-  opacity: 0.2;
+  opacity: 0.3;
   color: var(--foreground);
+}
+
+.app_cc a {
+  font-weight: 600;
 }
 
 /* Background animation container */
 .animation {
+  display: none;
   width: 100vw;
   height: 100vh;
   position: fixed;
