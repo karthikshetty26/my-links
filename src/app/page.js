@@ -34,7 +34,7 @@ export default function Home() {
         {/* Container for biographical information */}
         <div className={HOMECSS.bio_content}>
           <h1>Karthik Shetty</h1>
-          <p className={HOMECSS.bio}>Build web apps, write clean code, sleep early like a responsible adult, & chase protein like it's a rare loot drop.</p>
+          <p className={HOMECSS.bio}>Build web apps, write clean code, sleep early like a responsible adult, & chase protein like it&apos;s a rare loot drop.</p>
 
           {/* Location display with SVG icon */}
           {/* <div className={HOMECSS.location}>
